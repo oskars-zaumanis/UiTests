@@ -26,6 +26,7 @@ namespace UITests
 
             string appUrl = ConfigurationManager.AppSettings["AppUrl"];
 
+            System.Environment.SetEnvironmentVariable("webdriver.chrome.driver", @"C:\tools\chromedriver_win32\chromedriver.exe");
             var options = new ChromeOptions();
             options.AddArgument("test-type");
             Driver = new ChromeDriver(options);
